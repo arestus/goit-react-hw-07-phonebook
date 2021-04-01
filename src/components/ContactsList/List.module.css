@@ -1,0 +1,18 @@
+.contacts {
+  list-style-type: none;
+}
+.listItem {
+  font-family: 'Josefin Slab', serif;
+  align-items: baseline;
+  display: flex;
+  width: 300px;
+}
+.button {
+  margin-left: 5px;
+  cursor: pointer;
+  height: 20px;
+}
+.button:hover {
+  background-color: red;
+  border: 2px solid black;
+}

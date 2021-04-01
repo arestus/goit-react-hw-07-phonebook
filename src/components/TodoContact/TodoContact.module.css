@@ -1,0 +1,28 @@
+.headStyle {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.labelStyle {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.inputStyle {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.button {
+  width: 165px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: chartreuse;
+  border: 2px solid chartreuse;
+}
+.titleText {
+  margin-left: 500px;
+  margin-right: 500px;
+}
