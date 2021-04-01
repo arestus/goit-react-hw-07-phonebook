@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import TodoContact from './components/TodoContact';
 import ContactsList from './components/ContactsList';
 import Filter from './components/Filter';
-import contactsOperations from './redux/contacts/contacts-operations';
+import { contactsOperations } from './redux/contacts';
 
 class App extends Component {
   state = {};

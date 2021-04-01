@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './List.module.css';
 import PropTypes from 'prop-types';
-import contactsOperations from '../../redux/contacts/contacts-operations';
 import { connect } from 'react-redux';
+import { contactsSelectors, contactsOperations } from '../../redux/contacts';
 
 const ContactsList = ({ contacts, onDeleteContact }) => (
   <ul className={s.contacts}>
@@ -34,15 +34,8 @@ ContactsList.propTypes = {
   onDeleteContact: PropTypes.func.isRequired,
 };
 
-const getVisibileContacts = (allContacts, filter) => {
-  const normalizedFilter = filter.toLowerCase();
-  return allContacts.filter(({ name }) =>
-    name.toLowerCase().includes(normalizedFilter),
-  );
-};
-
-const mapStateToProps = ({ contacts: { contacts, filter } }) => ({
-  contacts: getVisibileContacts(contacts, filter),
+const mapStateToProps = state => ({
+  contacts: contactsSelectors.getVisibileContacts(state),
 });
 
 const mapDispatchToProps = dispatch => ({
